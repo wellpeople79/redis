@@ -27,6 +27,7 @@ tar xvzf redis-stable.tar.gz
 
 cd redis-stable
 
+
 make
 
 sudo make install
@@ -68,3 +69,23 @@ make rebuild방법
 #make distclean
 #make
 </pre>
+
+
+
+cd /src
+
+make test 성공후
+
+cd ..
+
+cd /utils
+
+sudo ./install_server.sh
+
+default로 엔터
+
+마지막 redis executable path 설정함.
+
+/home/current79ing/redis-stable/src/redis-server
+
+
