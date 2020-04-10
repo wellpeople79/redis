@@ -33,12 +33,11 @@ redis-server
 설치시 에러난 경우
 -
 
-1. gcc   
-
+1.gcc   
 sudo yum install gcc
 
 
-2. jemalloc
+2.jemalloc
 * centOS 7.0 이전버전
 -> yum -y install jemalloc
 * centOS 7.0 이상버전
@@ -46,8 +45,13 @@ sudo yum install gcc
 -> yum -y install varnish
 
 위 경우에도 안되는 경우
+-
+
 cd deps
+
 sudo make hiredis jemalloc linenoise lua
+
 cd ..
+
 sudo make install
 
