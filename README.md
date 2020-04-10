@@ -88,4 +88,7 @@ default로 엔터
 
 /home/current79ing/redis-stable/src/redis-server
 
+서비스 등록
+----------
+sudo systemctl start redis_6379
 
