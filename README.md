@@ -92,3 +92,12 @@ default로 엔터
 ----------
 sudo systemctl start redis_6379
 
+.bashrc파일을 수정함.
+--------------------
+vim ~/.bashrc
+
+문자의 끝에 alias를 등록함.
+--------------------------
+alias redis-cli=~/redis-stable/src/redis-cli
+alias redis-server=~/redis-stable/src/redis-server
+
