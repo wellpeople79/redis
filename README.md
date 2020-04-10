@@ -16,3 +16,38 @@ redis> get foo
 
 사양보는법
 [ec2-user@ip주소]$ cat /etc/*-release | uniq
+
+
+설치주소 추가
+-
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
+
+sudo make install
+ 
+redis-server
+
+
+설치시 에러난 경우
+-
+
+1. gcc   
+
+sudo yum install gcc
+
+
+2. jemalloc
+* centOS 7.0 이전버전
+-> yum -y install jemalloc
+* centOS 7.0 이상버전
+-> yum -y install epel-release
+-> yum -y install varnish
+
+위 경우에도 안되는 경우
+cd deps
+sudo make hiredis jemalloc linenoise lua
+cd ..
+sudo make install
+
