@@ -59,3 +59,9 @@ cd ..
 sudo make install
 
 sudo yum install -y tcl
+
+make rebuild방법
+<pre>
+#make distclean
+#make
+</pre>
