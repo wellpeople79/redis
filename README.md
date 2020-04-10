@@ -26,6 +26,8 @@ cd redis-stable
 make
 
 sudo make install
+
+sudo yum install -y tcl
  
 redis-server
 
