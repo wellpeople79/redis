@@ -22,15 +22,18 @@ redis> get foo
 설치주소 추가
 ------------
 wget http://download.redis.io/redis-stable.tar.gz
+
 tar xvzf redis-stable.tar.gz
+
 cd redis-stable
+
 make
 
 sudo make install
 
 sudo yum install -y tcl
  
-redis-server
+redis-server로 서버실행함.
 
 
 설치시 에러난 경우
