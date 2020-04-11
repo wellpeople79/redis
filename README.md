@@ -98,6 +98,16 @@ vim ~/.bashrc
 
 문자의 끝에 alias를 등록함.
 --------------------------
+<pre>
 alias redis-cli=~/redis-stable/src/redis-cli
 alias redis-server=~/redis-stable/src/redis-server
+</pre>
+
+redis-cli 실행시 auth관련 에러시.
+--------------------------------
+redis-cli -p 6379 실행후
+
+auth관련 에러가 나면
+
+AUTH 설정한 password 입력하면됨.
 
