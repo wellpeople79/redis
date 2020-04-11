@@ -132,4 +132,33 @@ redis 실행중인 process 조회
 ps -ef | grep redis
 </pre>
 
+센티널 설정
+----------
+51001.conf, 51002.conf, 51003.conf
+ 
+센티널이 실행될 포트 설정
+------------------------
+port 51001: 설정파일마다 다르게 함.
 
+센티널이 감시할 레디스 Master 인스턴스 정보설정.
+----------------------------------------------
+* sentinel monitor mymaster <redis master host> <redis master port> <quorum>
+* sentinel monitor mymaster 127.0.0.1 10000 2
+
+센티널이 Master 인스턴스에 접속하기 위한 패스워드설정.
+---------------------------------------------------
+sentinel auth-pass mymaster foobared
+
+센티널이 Master 인스턴스와 접속이 끊겼다는 것을 알기 위한 최소한의 시간설정.
+--------------------------------------------------------------------------
+sentinel down-after-milliseconds mymaster 30000
+
+페일오버 작업 시간의 타임오버 시간[ 기본값으로 3분 ]
+--------------------------------------------------
+sentinel failover-timeout mymaster 180000
+
+Master로부터 동기화 할 수 있는 slave의 개수를 설정함.
+---------------------------------------------------
+* 값이 클수록 Master에 부하가 가중됨.
+* 값이 1이라면 Slave는 한대씩 Master와 동기화를 진행함.
+* sentinel parallel-syncs mymaster 1
