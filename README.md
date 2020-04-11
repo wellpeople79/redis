@@ -111,6 +111,11 @@ auth관련 에러가 나면
 
 AUTH 설정한 password 입력하면됨.
 
+redis-cli 관련 옵션
+------------------
+* -p : port
+* -a : password
+
 
 redis-cli 명령어로 shutdown후 master, slave재실행함.
 ---------------------------------------------------
@@ -126,3 +131,5 @@ redis 실행중인 process 조회
 <pre>
 ps -ef | grep redis
 </pre>
+
+
