@@ -142,8 +142,10 @@ port 51001: 설정파일마다 다르게 함.
 
 센티널이 감시할 레디스 Master 인스턴스 정보설정.
 ----------------------------------------------
-* sentinel monitor mymaster <redis master host> <redis master port> <quorum>
-* sentinel monitor mymaster 127.0.0.1 10000 2
+<pre>
+sentinel monitor mymaster <redis master host> <redis master port> <quorum>
+sentinel monitor mymaster 127.0.0.1 10000 2
+</pre>
 
 센티널이 Master 인스턴스에 접속하기 위한 패스워드설정.
 ---------------------------------------------------
