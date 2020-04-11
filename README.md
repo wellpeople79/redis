@@ -120,3 +120,9 @@ redis-cli -p 6379 shutdown
 redis-cli -p 6380 shutdown
 redis-cli -p 6381 shutdown
 </pre>
+
+redis 실행중인 process 조회
+--------------------------
+<pre>
+ps -ef | grep redis
+</pre>
