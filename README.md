@@ -111,3 +111,12 @@ auth관련 에러가 나면
 
 AUTH 설정한 password 입력하면됨.
 
+
+redis-cli 명령어로 shutdown후 master, slave재실행함.
+---------------------------------------------------
+<pre>
+# redis shutdown
+redis-cli -p 6379 shutdown
+redis-cli -p 6380 shutdown
+redis-cli -p 6381 shutdown
+</pre>
