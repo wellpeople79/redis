@@ -165,3 +165,10 @@ Master로부터 동기화 할 수 있는 slave의 개수를 설정함.
 * 값이 클수록 Master에 부하가 가중됨.
 * 값이 1이라면 Slave는 한대씩 Master와 동기화를 진행함.
 * sentinel parallel-syncs mymaster 1
+
+
+sentinel 실행
+-------------
+* redis-sentinel ../sentinel_51001.conf
+* redis-sentinel ../sentinel_51002.conf
+* redis-sentinel ../sentinel_51003.conf
