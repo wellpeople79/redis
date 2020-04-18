@@ -189,3 +189,4 @@ Redis 외부접속방법
 
 * redis-cli를 어느곳에나 실행가능하게 설정변경함. 
 * sudo cp src/redis-cli /usr/bin/
+* redis-cli -h <redis 서버 ip> -p <redis port> -a <password>
