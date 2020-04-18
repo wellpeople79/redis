@@ -220,3 +220,11 @@ Redis 암호설정방법
 1) "requirepass"
 2) "xxxxx"
 </pre>
+
+
+redis 서비스 실행상태 확인
+-------------------------
+<pre>
+# netstat -npat | grep redis
+# service redis restart
+</pre>
