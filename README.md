@@ -190,3 +190,33 @@ Redis 외부접속방법
 * redis-cli를 어느곳에나 실행가능하게 설정변경함. 
 * sudo cp src/redis-cli /usr/bin/
 * redis-cli -h <redis 서버 ip> -p <redis port> -a <password>
+
+Redis 암호설정방법
+-----------------
+
+* redis-cli -p {포트번호} 로 실행
+
+* 패스워드가 있는지 확인한다.
+
+<pre>
+* config get requirepass
+1) "requirepass"
+2) ""
+</pre>
+
+암호설정이 안된경우이므로 암호설정을 해준다.
+-------------------------------------------
+<pre>
+* config set requirepass xxxxx
+* (error) NOAUTH Authentication required.
+</pre>
+
+위와 같은 에러가 발생하면 이전에 설정된 암호로 인증을 해준다.
+----------------------------------------------------------
+<pre>
+* auth xxxxx 
+
+* config get requirepass 
+1) "requirepass"
+2) "xxxxx"
+</pre>
