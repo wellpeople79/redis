@@ -187,5 +187,5 @@ Redis 외부접속방법
 * redis-cli -h 외부ip주소
 
 
-redis-cli를 어느곳에나 실행가능하게 설정변경함. 
-sudo cp src/redis-cli /usr/bin/
+* redis-cli를 어느곳에나 실행가능하게 설정변경함. 
+* sudo cp src/redis-cli /usr/bin/
