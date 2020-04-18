@@ -172,3 +172,20 @@ sentinel 실행
 * redis-sentinel ../sentinel_51001.conf
 * redis-sentinel ../sentinel_51002.conf
 * redis-sentinel ../sentinel_51003.conf
+
+
+Redis 외부접속방법
+------------------
+
+* make하기위해 gcc를 다운로드함.
+* sudo yum install -y gcc
+
+* redis-cli 설치한 후 make를 실행함.
+* wget http://download.redis.io/redis-stable.tar.gz && tar xvzf redis-stable.tar.gz && cd redis-stable && make
+
+* 외부에서 redis-server로 연결실행함.
+* redis-cli -h 외부ip주소
+
+
+redis-cli를 어느곳에나 실행가능하게 설정변경함. 
+sudo cp src/redis-cli /usr/bin/
